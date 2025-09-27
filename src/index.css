@@ -1,0 +1,482 @@
+/* ---------------- RESET ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   font-family: 'Jost', sans-serif;
+}
+
+body {
+  width: 100%;
+  background: #fff;
+  color: #333;
+}
+
+/* ---------------- HEADER ---------------- *//* Header - Desktop */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+}
+
+header .logo-img {
+  height: 60px;
+}
+
+header nav {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.1vw;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #ff4d00;
+}
+
+header .profile-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header .profile-button img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ff4d00;
+}
+
+header .contact-text h6 {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+header .contact-text h3 {
+  font-size: 1rem;
+  color: white;
+}
+
+/* ------------------- Responsive ------------------- */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+  header nav {
+    font-size: 2vw;
+    gap: 1rem;
+  }
+
+  header .profile-button h3 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    padding: 1rem 3%;
+  }
+
+  header nav {
+    display: none; /* Hide menu initially on mobile */
+    flex-direction: column;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1rem 0;
+  }
+
+  header nav a {
+    padding: 0.8rem 1rem;
+    display: block;
+  }
+
+  /* Mobile menu toggle button */
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+/* Show menu when active */
+header nav.active {
+  display: flex;
+}
+
+
+/* ---------------- HERO ---------------- */
+.hero {
+  height: 100vh;
+  background: url("./img/5c75e994061c4e3d25a26f82ed7fde0b72f013a1.jpg") no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 5rem;
+  gap: 1.5rem;
+  color: white;
+}
+
+.hero h4 {
+  font-size: 1.5rem;
+  border-left: 4px solid #ff4d00;
+  padding-left: 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  max-width: 800px;
+}
+
+.hero button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: 2px solid #ff4d00;
+  border-left: 5px solid #ff4d00;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hero button:hover {
+  background: #ff4d00;
+  color: white;
+}
+
+/* ---------------- ABOUT ---------------- */
+.about {
+  padding: 6rem 5%;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #ff4d00;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #555;
+}
+
+/* ---------------- COURSES ---------------- */
+.courses {
+  padding: 80px 20px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.courses .subtitle {
+  color: #ff4d00;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.courses .title {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.course-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.course-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #ff4d00;
+}
+
+.course-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+@media screen and (max-width: 1024px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .courses .title {
+    font-size: 2.2rem;
+  }
+}
+
+/* ---------------- FACULTY ---------------- */
+.faculty {
+  padding: 6rem 5%;
+  text-align: center;
+}
+
+.faculty h2 {
+  font-size: 2.5rem;
+  color: #ff4d00;
+  margin-bottom: 3rem;
+}
+
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.faculty-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.faculty-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.faculty-card h4 {
+  color: #ff4d00;
+  margin-bottom: 0.5rem;
+}
+
+.faculty-card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* ---------------- TESTIMONIALS ---------------- */
+.testimonials {
+  background: #f8f8f8;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+.testimonial-slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.testimonial-card {
+  flex: 0 0 33.33%;
+  background: #fff;
+  margin: 0 10px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.testimonial-card span {
+  font-weight: bold;
+  color: #ff4d00;
+  margin-top: 15px;
+}
+
+.testimonial-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.testimonial-controls button {
+  background: #ff4d00;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.testimonial-controls button:hover {
+  background: #e05500;
+}
+
+@media screen and (max-width: 900px) {
+  .testimonial-card {
+    flex: 0 0 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .testimonial-card {
+    flex: 0 0 100%;
+  }
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 60px 5% 20px;
+  font-family: "Jost", sans-serif;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.footer-about p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-links h4,
+.footer-contact h4,
+.footer-socials h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ff4d00;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ff4d00;
+}
+
+.footer-contact p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ccc;
+}
+
+.footer-contact a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #ff4d00;
+}
+
+.footer-socials a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  background: #ff4d00;
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 15px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;
+}
