@@ -1,16 +1,36 @@
-# React + Vite
+# IELTS Institute Website (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive website template for an educational institute built with **React**, **Vite**, and **CSS**.  
+It includes sections such as Header, Hero, About, Courses, Faculty, Testimonials, and Footer.
 
-Currently, two official plugins are available:
+![Screenshot](./screenshot.png) <!-- Optional -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Modern, mobile-friendly responsive design
+- Fixed header with navigation links
+- Hero section with call-to-action button
+- About section describing the institute
+- Courses section with grid layout
+- Faculty section with teacher profiles
+- Testimonials slider for student feedback
+- Footer with quick links, contact info, and social media icons
+- Google Fonts & Font Awesome icons integrated
+- Built using React + Vite for fast development
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+
+- **React 18**
+- **Vite**
+- **CSS3**
+- **Google Fonts (Jost)**
+- **Font Awesome Icons**
+
+---
+
+## 📂 Project Structure
+
