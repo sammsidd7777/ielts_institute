@@ -124,7 +124,7 @@ header nav.active {
 /* ---------------- HERO ---------------- */
 .hero {
   height: 100vh;
-  background: url("./img/5c75e994061c4e3d25a26f82ed7fde0b72f013a1.jpg") no-repeat center/cover;
+  background: url("/img/5c75e994061c4e3d25a26f82ed7fde0b72f013a1.jpg") no-repeat center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
