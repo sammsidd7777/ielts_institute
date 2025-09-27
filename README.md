@@ -3,7 +3,7 @@
 A fully responsive website template for an educational institute built with **React**, **Vite**, and **CSS**.  
 It includes sections such as Header, Hero, About, Courses, Faculty, Testimonials, and Footer.
 
-![Screenshot](./screenshoot.png) <!-- Optional -->
+![Screenshot](./screenshoot.png.png) <!-- Optional -->
 
 ---
 
